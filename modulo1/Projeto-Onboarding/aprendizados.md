@@ -1,0 +1,3 @@
+# Aprendizados da Semana
+
+Nessa semana aprendi muito sobre o terminal e os comandas mais básicos do terminal e também sobre git e github e a diferença entre eles: git **é uma ferramenta de gerenciamento de versões e projetos** e o GitHub **é um serviço de nuvem que permite deixar esses projetos *guardados***. Aprendemos também os principais comandos de Git e como usar o GitHub. Além disso, o Projeto da semana nos permitiu ter o primeiro contato com o VsCode.
