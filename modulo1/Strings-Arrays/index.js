@@ -72,3 +72,6 @@ console.log (fraseLista)
 const frutas = ["Banana", "Morango", "Abacaxi", "Laranga", "Ameixa"]
 console.log (frutas [2])
 console.log (frutas.length)
+
+//Exercicios finalizados
+
