@@ -131,16 +131,7 @@ function checaRenovacaoRG() {
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
-  const anoInformado = ano
-  const multiplo400 = ano % 400
-  const multiplo4 = ano % 4
-  const multiplo100 = ano % 100
-  const boolean = multiplo400 === 0
-  const boolean2 = multiplo4 > 0
-  const boolean3 = multiplo100 === 0
-  const bisexto = !boolean2 
-  const bisexto2 = bisexto && boolean2
-  return bisexto2
+  
 }
 
 // EXERCÍCIO 15
