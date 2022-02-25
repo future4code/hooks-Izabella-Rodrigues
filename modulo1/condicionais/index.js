@@ -115,7 +115,7 @@ switch (etapaJogo) {
             case 3: 
             valorIngresso = 550
             break;
-            case 2: 
+            case 4: 
             valorIngresso = 220
             break;
         }   
@@ -131,7 +131,7 @@ switch (etapaJogo) {
             case 3: 
             valorIngresso = 330
             break;
-            case 2: 
+            case 4: 
             valorIngresso = 170
             break;
     }
@@ -147,7 +147,7 @@ switch (etapaJogo) {
             case 3: 
             valorIngresso = 880
             break;
-            case 2: 
+            case 4: 
             valorIngresso = 330
             break;
     default:
@@ -157,21 +157,32 @@ switch (etapaJogo) {
 }
 
 let ingresso = tipoJogo // informa se o ingresso é internacional ou domestico
-    if (tipoJogo === "IN") {
-        valorIngresso * 4,10
-    } else {
-        valorIngresso
-    }
+    switch (tipoJogo) {
+    case "IN":
+        ingresso = (valorIngresso * 4.10)
+        break;
+    default:
+        ingresso = valorIngresso
+        break;
+    }    
 
+    console.log (ingresso)
+    
 
-function valorTotalIngressos (num1, num2) { // valor total dos ingressos
-    const valorTotal = num1 * num2
-    return valorTotal
+let tipo = tipoJogo // qual tipo de jogo
+switch (tipoJogo) {
+    case "IN":
+        tipo = "Internacional"
+        break;
+    case "DO":
+        tipo = "Doméstico"
+        break;
+    default:
+        tipo = "Não encontrada" 
 }
-valorTotalIngressos (ingresso, quantidadeIngresso)
- const valorTotal1 = valorTotal
 
-let etapa // qual etapa do jogo
+
+let etapa = etapaJogo // qual etapa do jogo
 switch (etapaJogo) {
     case "SF":
         etapa = "Semifinais"
@@ -184,16 +195,19 @@ switch (etapaJogo) {
         break;
         default:
         etapa = "Não encontrada"
+
 }
+
+const valorTotal = (ingresso * quantidadeIngresso)
+
 
 console.log (
 ` --- Dados da compra ---
  Nome do cliente: ${nomeCompleto}
- Tipo do Jogo: ${tipoJogo}
+ Tipo do Jogo: ${tipo}
  Etapa do Jogo: ${etapa}
  Categoria: ${categoria}
  Quantidade de Ingressos: ${quantidadeIngresso}
  --- Valores ---
- Valor do ingresso: R$ ${valorIngresso}
- Valor total: R$ ${valorTotal}    `
-)
+ Valor do ingresso: R$ ${ingresso}
+ Valor total: R$ ${valorTotal} `)
