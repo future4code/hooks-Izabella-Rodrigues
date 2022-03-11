@@ -107,66 +107,69 @@ switch (etapaJogo) {
     case "SF": {
         switch (categoria) {
             case 1: 
-            valorIngresso = 1320
-            break;
+                valorIngresso = 1320
+                break;
             case 2: 
-            valorIngresso = 880
-            break;
+                valorIngresso = 880
+                break;
             case 3: 
-            valorIngresso = 550
-            break;
+                valorIngresso = 550
+                break;
             case 4: 
-            valorIngresso = 220
-            break;
-        }   
+                valorIngresso = 220
+                break;
+        }
+        break;
     }
     case "DT": {
         switch (categoria) {
              case 1: 
-            valorIngresso = 660
-            break;
+                valorIngresso = 660
+                break;
             case 2: 
-            valorIngresso = 440
-            break;
+                valorIngresso = 440
+                break;
             case 3: 
-            valorIngresso = 330
-            break;
+                valorIngresso = 330
+                break;
             case 4: 
-            valorIngresso = 170
-            break;
-    }
+                valorIngresso = 170
+                break;
+        }
+        break;
     }
     case "FI": {
         switch (categoria) {
             case 1: 
-            valorIngresso = 1980
-            break;
+                valorIngresso = 1980
+                break;
             case 2: 
-            valorIngresso = 1320
-            break;
+                valorIngresso = 1320
+                break;
             case 3: 
-            valorIngresso = 880
-            break;
+                valorIngresso = 880
+                break;
             case 4: 
-            valorIngresso = 330
-            break;
-    default:
-        valorIngresso = 0
-}
-}
+                valorIngresso = 330
+                break;
+            default:
+                valorIngresso = 0
+                break;
+        }
+    }
 }
 
 let ingresso = tipoJogo // informa se o ingresso é internacional ou domestico
-    switch (tipoJogo) {
+switch (tipoJogo) {
     case "IN":
         ingresso = (valorIngresso * 4.10)
         break;
     default:
         ingresso = valorIngresso
         break;
-    }    
+}
 
-    console.log (ingresso)
+console.log (ingresso)
     
 
 let tipo = tipoJogo // qual tipo de jogo
@@ -193,12 +196,16 @@ switch (etapaJogo) {
     case "FI":
         etapa = "Final"
         break;
-        default:
+    default:
         etapa = "Não encontrada"
 
 }
 
-const valorTotal = (ingresso * quantidadeIngresso)
+function calcularValorTotal(valorIngresso, quantidade) {
+    return (valorIngresso * quantidade);
+}
+
+const valorTotal = calcularValorTotal(ingresso, quantidade)
 
 
 console.log (
