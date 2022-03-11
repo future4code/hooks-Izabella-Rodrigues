@@ -116,10 +116,15 @@ nomePokemon.sort()
 
 console.log(nomePokemon)
 
-// b)
-const tipoPokemon = pokemons.map ((item) => {
-   return item.tipo
+//b)
+const tipoPokemon = pokemons.map((item) => {
+   return item.tipo 
 }
 )
+console.log(tipoPokemon)
 
-   
+const tipo = tipoPokemon.filter ((item, outro) => {
+     return tipoPokemon.indexOf(item) == outro
+})
+
+console.log (tipo)
