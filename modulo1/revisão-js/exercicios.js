@@ -10,7 +10,7 @@ function retornaTamanhoArray(array) {
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-   return array.reverse()
+  return array.reverse()
 }
 
 // EXERCÍCIO 03
@@ -24,20 +24,24 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-   return array.filter((array) => {
-      return array % 2 === 0
-   }) 
+  return array.filter((array) => {
+     return array % 2 === 0
+  })
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    
-   
-}
+   let arrayPar = array.filter((array) => {
+      return array % 2 === 0
+   }).map((item) => {
+      return item ** 2
+   })
+      return arrayPar
+}     
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+   return Math.max.apply(null, array)
 }
 
 // EXERCÍCIO 07
