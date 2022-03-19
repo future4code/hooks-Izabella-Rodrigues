@@ -44,10 +44,13 @@ function retornaMaiorNumero(array) {
    return Math.max.apply(null, array)
 }
 
-
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+   const meuObjeto = {maiorNumero: Math.max(num1, num2),
+   maiorDivisivelPorMenor: (Math.max(num1, num2)) % (Math.min(num1, num2)) === 0,
+   diferenca: (Math.max(num1, num2)) - (Math.min(num1, num2))
+   } 
+   return meuObjeto
 }
 
 // EXERCÍCIO 08
