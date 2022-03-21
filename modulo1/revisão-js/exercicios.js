@@ -71,27 +71,43 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
-}
+  const arrayNumeros = [numeroMaior, numeroMenor]
+  const numeroMaior =  Math.max.apply(null, array)
+  const numeroMenor =  Math.min.apply(null, array)
+  return arrayNumeros
+} 
+
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+   return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}.`
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+    const novaPessoa = {
+       ...pessoa,
+       nome: "ANÔNIMO"
+    }
+     return novaPessoa
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+   const altura = pessoas.altura >= 1.5 
+   const idade1 = pessoas.idade > 14
+   const idade2 = pessoas.idade < 60
+   const pessoasAutorizadas = altura && idade1 && idade2
+   return pessoasAutorizadas
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+   const altura = pessoas.altura < 1.5 
+   const idade3 = pessoas.idade < 14
+   const idade4 = pessoas.idade > 60
+   const pessoasNaoAutorizadas = altura && idade1 && idade2
+   return pessoasNaoAutorizadas
 }
 
 // EXERCÍCIO 14
@@ -101,10 +117,18 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+   return consultas.sort(function compare(a, b){
+      if (a.nome > b.nome) return 1;
+      if (a.nome < b.nome) return -1;
+      return 0;
+   })
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+   return consultas.sort(function compare(a, b){
+      if (a.dataDaConsulta.getTime() > b.dataDaConsulta.getTime()) return 1;
+      if (a.dataDaConsulta.getTime() < b.dataDaConsulta.getTime()) return -1;
+      return 0;
+   })
 }
