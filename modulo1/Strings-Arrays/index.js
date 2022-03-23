@@ -26,16 +26,16 @@
 //const email = prompt ("Qual seu email?")
 //console.log (`O e-mail ${email} foi cadastrado com sucesso. Seja bem-vinda(O), ${nome}`)
 
-//2
+// //2
 
-const comidasFavoritas = ["churrasco", "yakisoba", "lasanha", "torta de limão", "hamburguer"]
-//a)
-console.log(comidasFavoritas)
+// const comidasFavoritas = ["churrasco", "yakisoba", "lasanha", "torta de limão", "hamburguer"]
+// //a)
+// console.log(comidasFavoritas)
 
-//b)
-console.log ("Essas são as minhas comidas preferidas:", comidasFavoritas)
+// //b)
+// console.log ("Essas são as minhas comidas preferidas:", comidasFavoritas)
 
-//c) 
+// //c) 
 
 //const comidaFavoritaUsuario = prompt ("Qual sua comida favorita?")
 //comidasFavoritas.push(comidaFavoritaUsuario)
@@ -61,17 +61,18 @@ console.log ("Essas são as minhas comidas preferidas:", comidasFavoritas)
 
 //Desafio 01
 
-const frase = "O dia hoje não foi produtivo"
-const fraseLista= frase.split('')
+// const frase = "O dia hoje não foi produtivo"
+// const fraseLista= frase.split('')
 
-console.log (fraseLista)
+// console.log (fraseLista)
 
 
-//Desafio 02
+// //Desafio 02
 
-const frutas = ["Banana", "Morango", "Abacaxi", "Laranga", "Ameixa"]
-console.log (frutas [2])
-console.log (frutas.length)
+// const frutas = ["Banana", "Morango", "Abacaxi", "Laranga", "Ameixa"]
+// console.log (frutas [2])
+// console.log (frutas.length)
 
-//Exercicios finalizados
+// //Exercicios finalizados
+
 

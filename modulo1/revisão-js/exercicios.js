@@ -60,23 +60,35 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-   if (ladoA === ladoB === ladoC){
-      return "Equilátero"
-   } else if(ladoA !== ladoB !== ladoC) {
-      return "Escaleno"
+   if (ladoA !== ladoB && ladoB !== ladoC && ladoA!== ladoC){
+      return "Escaleno";
+   } else if(ladoA === ladoB && ladoB === ladoC) {
+      return "Equilátero";
    } else {
-      return "Isósceles"
+      return "Isósceles";
    }
 }
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  const arrayNumeros = [numeroMaior, numeroMenor]
-  const numeroMaior =  Math.max.apply(null, array)
-  const numeroMenor =  Math.min.apply(null, array)
-  return arrayNumeros
-} 
+   const novoArray = []
+   let array2 
+      return array.filter((item) => {
+      Math.max.apply(null, array)
+      Math.min.apply(null, array) 
+      
+      
+      return array2 [Math.max.apply(null, array2), Math.min.apply(null, array2)]
+   }) 
+    
+}
+   
 
+
+     
+
+
+   
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
@@ -94,25 +106,34 @@ function retornaPessoaAnonimizada(pessoa) {
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   const altura = pessoas.altura >= 1.5 
-   const idade1 = pessoas.idade > 14
-   const idade2 = pessoas.idade < 60
-   const pessoasAutorizadas = altura && idade1 && idade2
-   return pessoasAutorizadas
+   let pessoasAutorizadas = []
+   for (let pessoa of pessoas) {
+      if (pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60)
+      pessoasAutorizadas.push(pessoa)
+   }
+  return pessoasAutorizadas
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-   const altura = pessoas.altura < 1.5 
-   const idade3 = pessoas.idade < 14
-   const idade4 = pessoas.idade > 60
-   const pessoasNaoAutorizadas = altura && idade1 && idade2
-   return pessoasNaoAutorizadas
+   let pessoasNaoAutorizadas = []
+   for (let pessoa of pessoas) {
+      if (pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade > 60)
+      pessoasNaoAutorizadas.push(pessoa);
+   }
+  return pessoasNaoAutorizadas
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+   contas.forEach((conta) => {
+      let totalDeCompras = 0
+      conta.compras.forEach((valor) => {
+        totalDeCompras += valor
+      })
+     const contasAtualizadas = conta.saldoTotal -= totalDeCompras
+    })
+    return contasAtualizadas
 }
 
 // EXERCÍCIO 15A
@@ -126,9 +147,13 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   return consultas.sort(function compare(a, b){
-      if (a.dataDaConsulta.getTime() > b.dataDaConsulta.getTime()) return 1;
-      if (a.dataDaConsulta.getTime() < b.dataDaConsulta.getTime()) return -1;
-      return 0;
-   })
+   for (let data of consultas.dataDaConsulta){
+      let 
+      return consultas.dataDaConsulta.getTime()
+   }
+
+
+
+
+
 }
