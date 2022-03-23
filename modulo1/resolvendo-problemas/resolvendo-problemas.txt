@@ -1,0 +1,19 @@
+    O primeiro passo pra resolver problemas é prestar atenção no enunciado, entendendo todas as 
+solicitações que estão sendo feitas, e quais informações serão realmente uteis e vamos utilizar e
+isso nos ajuda a entrar no segundo passo que é extrair as informações que vamos usar do enunciado.
+    O segundo passo é pegar as palavras chaves e tentar usar para armazenar algumas variaveis e pensar  
+nas funções que vamos criar de acordo com o que o código esta pedindo que seja feito, também devemos    ]
+verificar se existem condições para as coisas acontecerem.
+    Após isso, devemos entender quais informações o código vai receber e de onde e como ele vai retornar 
+isso, por onde vão "sair" essas informações que meu código vai gerar e começar a criar funções.
+    Para ajudar a organizar a lógica do programa, devemos criar um passo a passo ou então diagrama  
+visual do que se espera do código e simular possiveis acontecimentos e a resposta esperada a partir 
+deles, isso pode ser feito em um papel ou em diagramas ja existentes, como o dev pensar melhor.
+    Depois de já ter todos os passos acima resolvidos começamos criando um código "alfa", que geralmente
+não é muito bonito, mas serve pra já começarmos a traduzir a lógica para a linguagem de programação e
+testar se elas estão funcionando.
+    Teste todas as possibilidades, tente "quebrar" seu código para identificar possiveis falhas e   
+já coloque na linguagem de programação desejada, assim como no idioma padrão(opcional por enquanto).
+    Por fim, o ultimo passo é "Refatorar" o código, separando as funções, dando melhores nomes as    
+variaveis e funções e nesse momento também é possivel otimizar algum processo.
+
