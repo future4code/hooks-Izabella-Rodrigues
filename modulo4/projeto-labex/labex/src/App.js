@@ -5,8 +5,6 @@ import { ListTripPage } from "./pages/ListTripPage";
 import Router  from "./Router";
 
 
-
-
 function App() {
   return (
   <Router/>
