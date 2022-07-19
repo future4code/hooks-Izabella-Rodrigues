@@ -1,7 +1,8 @@
-export const goToDetail = (history) => {
-    history.push ("/detalhes")
+export const goToDetail = (navigate) => {
+    navigate("/detalhes")
 }
 
-export const goToList = (history) => {
-    history.push ("/lista")
+export const goToList = (navigate) => {
+    navigate("/lista")
 }
+
