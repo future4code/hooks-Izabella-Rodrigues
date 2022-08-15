@@ -15,3 +15,8 @@ function person(nome : string, dataNascimento : string ) : string {
 console.log (person ("Izabella", "11/09/1999"))
 
 //Exercicio 02
+
+let nome = "Izabella"
+console.log(typeof nome)
+
+//Exercicio 03
