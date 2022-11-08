@@ -1,0 +1,39 @@
+//Para requisições com body:
+//Content-Type: application/json
+
+//Para requisições com headers
+//Authorization: "token"
+
+###
+GET http://localhost:3003/users
+
+###
+GET http://localhost:3003/users?typeUser=ADMIN
+
+###
+GET http://localhost:3003/users?name=Bella
+
+###
+POST  http://localhost:3003/users
+Content-Type: application/json
+
+{
+  "id":9,
+  "name": "Bella",
+  "email": "bella.01@email.com",
+  "type": "ADMIN",
+  "age": 23 
+}
+
+###
+PUT http://localhost:3003/users
+Content-Type: application/json
+
+{
+  "id":9,
+  "name": "Bella",
+  "email": "bella.01@email.com",
+  "type": "ADMIN",
+  "age": 23 
+}
+
