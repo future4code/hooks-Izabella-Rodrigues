@@ -79,11 +79,54 @@ app.get("/CPF/accounts", (req: Request, res: Response) => {
 })
 
 
-app.put("/accounts/balance", (req: Request, res: Request) => {
+app.put("/accounts/balance", (req: Request, res: Response) => {
     let errorCode = 400
-    
+    try {
+        const name: string = req.body
+        const CPF: string = req.body
+        const transactionAmount: number = req.body
+
+        if(!name) {
+            errorCode = 422
+            throw new Error ("Digite um nome válido")
+        }
+        if(!CPF) {
+            errorCode = 422
+            throw new Error ("Digite um CPF válido")
+        }
+        if(!transactionAmount) {
+            errorCode = 422
+            throw new Error ("Digite um valor válido")
+        }
+
+        const account = accounts.find((account) => {
+            return name === account.name && CPF === account.CPF
+        })
+        
+        if (!account) {
+            errorCode = 404
+            throw new Error ("Usuario não encontrado")
+        }
+        
+        const newBalance = account.balance + transactionAmount
+
+        console.log (newBalance)
+
+        res.status(201).send(`O seu saldo atual é de R$ ${newBalance}`)
+            
+    } catch (error: any) {
+        res.status(errorCode).send(error.message)
+    }
 
 })
+
+
+
+
+
+
+
+
 
 app.listen(3003, () => {
     console.log("Server is running in http://localhost:3003")

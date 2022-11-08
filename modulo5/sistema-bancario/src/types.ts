@@ -8,6 +8,6 @@ export type account = {
     name: string,
     CPF: string,
     dateOFBirth: string,
-    balance: Number,
+    balance: number,
     statement: Array <transaction>
 }
