@@ -78,7 +78,6 @@ app.get("/CPF/accounts", (req: Request, res: Response) => {
     }
 })
 
-
 app.put("/accounts/balance", (req: Request, res: Response) => {
     let errorCode = 400
     try {
