@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import {selectPurchases}  from "../data/queries/selectPurchases";
 
-export const searchUsers = async (
+export const userShoppingSearch = async (
     req: Request,
     res: Response
 ): Promise <void> => {
@@ -23,3 +23,5 @@ export const searchUsers = async (
         })
     }
 }
+
+

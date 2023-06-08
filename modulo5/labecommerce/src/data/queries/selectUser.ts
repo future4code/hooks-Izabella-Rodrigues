@@ -10,4 +10,19 @@ export const selectUsers = async(): Promise <User[]> => {
 
 }
 
+export const getUserByEmail = async(email: String): Promise <User[]> => {
 
+    const  [user]  = await connection("labecommerce_users")
+        .where({email: email})
+
+        return user
+}
+
+
+export const getUserById = async(userId: string): Promise <User> => {
+
+    const user  = await connection("labecommerce_users")
+        .where({id: userId})
+
+        return user[0]
+}

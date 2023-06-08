@@ -8,6 +8,10 @@ export const searchUsers = async (
     try {
 
         const users = await selectUsers()
+
+        if(users.length < 1) {
+            throw new Error("Não existem usuários!");
+        }
     
         res.status(200).send(users)
         

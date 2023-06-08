@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import insertProduct from "../data/queries/insertProducts";
 import { v4 as uuid } from "uuid";
 import { Product } from "../types";
+import { getProductByName } from "../data/queries/selectProducts";
 
 export const createProduct = async (
     req: Request,
@@ -12,6 +13,14 @@ export const createProduct = async (
         if(!req.body.name || !req.body.price || !req.body.imageUrl) {
             throw new Error ("Você precisa enviar um nome, preço e a URL da imagem do produto!")
         }
+
+        const nameProduct = await getProductByName(req.body.name)
+
+       
+        if (nameProduct.length > 0) {
+            throw new Error("Esse produto já está cadastrado!");
+        }
+
 
         const newProduct: Product = {
             id: uuid(),
@@ -30,3 +39,4 @@ export const createProduct = async (
         })
     }
 }
+

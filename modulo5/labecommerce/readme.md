@@ -131,8 +131,4 @@ Essa funcionalidade irá permitir a exibição do histórico de compras no perfi
                 - `**http://localhost:3003/products?search=headset**`
         - caso nenhum termo de busca seja recebido, retorne todos os produtos
     
-    ### Busca por todos os usuários
-    
-    Altere o endpoint de busca por todos os usuários para que:
-    
-    - retorne também as **compras** de cada usuário em uma propriedade `**purchases`**
+   

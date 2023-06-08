@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import insertUsers from "../data/queries/insertUsers";
 import { v4 as uuid } from "uuid";
 import { User } from "../types";
+import { getUserByEmail } from "../data/queries/selectUser";
 
 export const createUser = async (
     req: Request,
@@ -9,9 +10,29 @@ export const createUser = async (
 ): Promise <void> => {
     try {
 
-        if(!req.body.name || !req.body.email || !req.body.password) {
+        const name = req.body.name
+        const email = req.body.email
+        const password = req.body.password
+
+        if(!name || !email || !password) {
             throw new Error ("Você precisa enviar um nome, email e senha!")
         }
+
+        const user  = await getUserByEmail(email)
+
+        if(user) {
+            throw new Error("Esse email já esta cadastrado!");
+        }
+
+        
+        if(!email.includes("@") || !email.includes(".com")) {
+            throw new Error("O campo do email deve conter um '@' e um '.com'");
+        }
+
+        if(password.length < 6) {
+            throw new Error("A senha deve conter no mínimo seis caracteres!");  
+        }
+
 
         const newUser: User = {
             id: uuid(),
